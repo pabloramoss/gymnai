@@ -4,7 +4,12 @@ import NextBack from "./BackNext";
 type PhysicalCondition = "principiante" | "intermedio" | "avanzado";
 const physicalConditions: PhysicalCondition[] = ["principiante", "intermedio", "avanzado"];
 
-const Step2 = () => {
+interface Props {
+  handleNext: () => void;
+  handleBack: () => void;
+}
+
+const Step2: React.FC<Props> = ({ handleBack, handleNext }) => {
   return (
     <CheckboxGroup colorScheme="green">
       <Stack spacing={[1, 5]}>
@@ -15,6 +20,8 @@ const Step2 = () => {
           </Checkbox>
         ))}
       </Stack>
+      <button onClick={handleBack}>Back</button>
+      <button onClick={handleNext}>Next</button>
       <NextBack />
     </CheckboxGroup>
   );

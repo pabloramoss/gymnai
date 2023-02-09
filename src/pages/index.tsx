@@ -3,6 +3,7 @@ import { Inter } from "@next/font/google";
 
 import styles from "@/styles/Home.module.css";
 import { HomePage } from "@/components/HomePage";
+import { COLORS } from "@/constants";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,7 +16,7 @@ export default function Home() {
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <link href="/favicon.ico" rel="icon" />
       </Head>
-      <main className={styles.main} style={{ background: "black" }}>
+      <main className={styles.main} style={{ background: COLORS.background }}>
         <HomePage />
       </main>
     </>

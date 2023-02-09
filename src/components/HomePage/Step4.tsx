@@ -1,7 +1,15 @@
 import { Select, CheckboxGroup, Stack, Checkbox } from "@chakra-ui/react";
 
 import NextBack from "./BackNext";
-type DaysOff = "lunes" | "martes" | "miercoles" | "jueves" | "viernes" | "sabado" | "domingo";
+type DaysOff =
+  | "lunes"
+  | "martes"
+  | "miercoles"
+  | "jueves"
+  | "viernes"
+  | "sabado"
+  | "domingo"
+  | "definir automatico";
 
 const dayOffs: DaysOff[] = [
   "lunes",
@@ -11,9 +19,15 @@ const dayOffs: DaysOff[] = [
   "viernes",
   "sabado",
   "domingo",
+  "definir automatico",
 ];
 
-const Step4: React.FC = () => {
+interface Props {
+  handleNext: () => void;
+  handleBack: () => void;
+}
+
+const Step4: React.FC<Props> = ({ handleBack, handleNext }) => {
   return (
     <Stack>
       <p>Tiempo disponible</p>
@@ -33,6 +47,8 @@ const Step4: React.FC = () => {
           ))}
         </Stack>
       </CheckboxGroup>
+      <button onClick={handleBack}>Back</button>
+      <button onClick={handleNext}>Next</button>
       <NextBack />
     </Stack>
   );

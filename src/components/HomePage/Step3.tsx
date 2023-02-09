@@ -4,7 +4,12 @@ import NextBack from "./BackNext";
 type TrainingGoals = "aumentar fuerza" | "mejorar resistencia" | "perder peso";
 const trainingGoals: TrainingGoals[] = ["aumentar fuerza", "mejorar resistencia", "perder peso"];
 
-const Step3 = () => {
+interface Props {
+  handleNext: () => void;
+  handleBack: () => void;
+}
+
+const Step3: React.FC<Props> = ({ handleBack, handleNext }) => {
   return (
     <CheckboxGroup colorScheme="green">
       <Stack spacing={[1, 5]}>
@@ -15,6 +20,8 @@ const Step3 = () => {
           </Checkbox>
         ))}
       </Stack>
+      <button onClick={handleBack}>Back</button>
+      <button onClick={handleNext}>Next</button>
       <NextBack />
     </CheckboxGroup>
   );
