@@ -22,12 +22,7 @@ const dayOffs: DaysOff[] = [
   "definir automatico",
 ];
 
-interface Props {
-  handleNext: () => void;
-  handleBack: () => void;
-}
-
-const Step4: React.FC<Props> = ({ handleBack, handleNext }) => {
+const Step4: React.FC = () => {
   return (
     <Stack>
       <p>Tiempo disponible</p>
@@ -47,8 +42,6 @@ const Step4: React.FC<Props> = ({ handleBack, handleNext }) => {
           ))}
         </Stack>
       </CheckboxGroup>
-      <button onClick={handleBack}>Back</button>
-      <button onClick={handleNext}>Next</button>
       <NextBack />
     </Stack>
   );

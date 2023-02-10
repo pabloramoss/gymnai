@@ -2,8 +2,9 @@ import Head from "next/head";
 import { Inter } from "@next/font/google";
 
 import styles from "@/styles/Home.module.css";
-import { HomePage } from "@/components/HomePage";
+import { HomePage } from "@/components/Home";
 import { COLORS } from "@/constants";
+import Slide from "@/components/Home/Slide";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,15 @@ export default function Home() {
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <link href="/favicon.ico" rel="icon" />
       </Head>
-      <main className={styles.main} style={{ background: COLORS.background }}>
+      <main
+        style={{
+          background: COLORS.background,
+          color: "white",
+          height: "90vh",
+          width: "100vw",
+          overflow: "hidden",
+        }}
+      >
         <HomePage />
       </main>
     </>
