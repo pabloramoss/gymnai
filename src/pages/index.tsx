@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Inter } from "@next/font/google";
 
 import styles from "@/styles/Home.module.css";
-import { HomePage } from "@/components/Home";
+import { UserInfo } from "@/components/Home";
 import { COLORS } from "@/constants";
 import Slide from "@/components/Home/Slide";
 
@@ -26,7 +26,7 @@ export default function Home() {
           overflow: "hidden",
         }}
       >
-        <HomePage />
+        <UserInfo />
       </main>
     </>
   );

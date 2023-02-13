@@ -12,7 +12,7 @@ import Step3 from "./Step3";
 import Step4 from "./Step4";
 import Step5 from "./Step5";
 
-const HomePage: React.FC = () => {
+const UserInfo: React.FC = () => {
   const [step, setStep] = useState(1);
   const [firstSwiper, setFirstSwiper] = useState(null);
   const [secondSwiper, setSecondSwiper] = useState(null);
@@ -55,4 +55,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default UserInfo;
