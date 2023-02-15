@@ -5,6 +5,7 @@ import styles from "@/styles/Home.module.css";
 import { UserInfo } from "@/components/Home";
 import { COLORS } from "@/constants";
 import Slide from "@/components/Home/Slide";
+import TextOpenai from "@/components/TextOpenai";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +28,7 @@ export default function Home() {
         }}
       >
         <UserInfo />
+        {/* <TextOpenai /> */}
       </main>
     </>
   );
