@@ -8,7 +8,7 @@ export async function generateText(prompt: any) {
   const data = {
     prompt,
     temperature: 0.15,
-    max_tokens: 60,
+    max_tokens: 1000,
     top_p: 1,
     frequency_penalty: 0,
     presence_penalty: 0,

@@ -1,11 +1,9 @@
 import Head from "next/head";
 import { Inter } from "@next/font/google";
 
-import styles from "@/styles/Home.module.css";
 import { UserInfo } from "@/components/Home";
 import { COLORS } from "@/constants";
-import Slide from "@/components/Home/Slide";
-import TextOpenai from "@/components/TextOpenai";
+import Submit from "@/components/Home/Submit";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,7 +26,6 @@ export default function Home() {
         }}
       >
         <UserInfo />
-        {/* <TextOpenai /> */}
       </main>
     </>
   );
